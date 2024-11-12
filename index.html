@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <script src="https://kit.fontawesome.com/c35572497d.js" crossorigin="anonymous"></script> 
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="cabecera">
+      <figure>
+        <img src="imagenes/logo.jpg" alt="" />
+      </figure>
+    </header>
+
+    <section class="sec-contenido">
+      <article class="art-contenido">
+        <h1 class="titulo1">Our Team</h1>
+        <h2 class="titulo2">A Dedicated Team of Experts</h2>
+        <p class="art-text">
+          Passion, experience and a fierce commitment to education are the
+          cornerstones of our success in the beauty industry
+        </p>
+        <p class="art-text2">
+          We that the largest SPA in the area is not enough in itself to satisfy
+          the needs of our customers. For this reason we have built up a staff
+          of specialized professionals who are proud to welcome you to our
+          hotel. present What We listen to needs and and during at Our SPA
+          Resort.
+        </p>
+        <p class="art-text2">
+          Everyone in Our is a certified Specialist capable Of delivering a
+          service Of high quality you won't find anywhere else in modem spa and
+          resort industry.
+        </p>
+        <div class="btns">
+            <a href="#" class="btn-rojo">LEARN MORE</a>
+            <a href="#" class="btn-blanco">VIEW ALL TEAM</a>
+        </div>
+      </article>
+      <article class="art-contenido cont-flex">
+        <div class="card">
+            <figure>
+                <img src="imagenes/foto1.jpg" alt="">
+            </figure>
+            <h1>Jessica Cooper</h1>
+            <p>Esthetician</p>
+            <div class="redes">
+                <i class="fa-brands fa-facebook-f"></i> 
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-pinterest"></i>
+            </div>
+            <div class="btn_cards">
+                <a href="#">GET IN TOUCH</a>
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="imagenes/foto2.jpg" alt="">
+            </figure>
+            <h1>Jessica Cooper</h1>
+            <p>Esthetician</p>
+            <div class="redes">
+                <i class="fa-brands fa-facebook-f"></i> 
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-pinterest"></i>
+            </div>
+            <div class="btn_cards">
+                <a href="#">GET IN TOUCH</a>
+            </div>
+        </div>
+      </article>
+    </section>
+    <section class="modal-padre" id="cont_modal">
+      <article class="modal">
+        <div class="cerrar" id="cerrar-modal">
+          <a href="#"><i class="fa-solid fa-x"></i></a>
+        </div>
+        <h1>CONTACT US</h1>
+        <p>If you have any questions concerning Our services. please fill Out the
+          contact form</p>
+          <form class="forms-modal">
+            <input type="text" placeholder="Name*">
+            <input type="text" placeholder="Email*">
+            <textarea placeholder="Message*"></textarea>
+            <a href="#" class="btnmodal">SUBMIT</a>
+          </form>
+      </article>
+    </section>
+
+    <script>
+      // script para que aparesca con tiempo
+      function tiempo(){
+            $("#cont_modal").addClass("mostrar");
+        }
+        setTimeout(tiempo, 5000);
+
+        // cerrar modal con la X
+
+       $("#cerrar-modal").click(function(){
+            $("#cont_modal").removeClass("mostrar");
+        })
+
+        // Dar click en cualquier lado para que se vaya el modal
+        window.onclick = function(event){
+            if(event.target == cont_modal){
+                $("#cont_modal").removeClass("mostrar");
+            }
+        };
+
+        //click tecla ESC 
+        document.addEventListener('keydown', function(event){
+          if(event.key === 'Escape'){
+            $("#cont_modal").removeClass("mostrar");
+          }
+        })
+
+        function onScroll(){
+          const scrollTop = window.scrollY;
+
+          if(scrollTop > 600){
+            $("cont_modal").addClass("mostrar");
+          }
+        }
+        window.addEventListener('scroll', onScroll);
+    </script>
+  </body>
+</html>

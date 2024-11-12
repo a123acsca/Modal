@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: helvetica;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+  }
+  
+  .ancho {
+    max-width: 1200px;
+    /* border: 2px red solid; */
+    margin: auto;
+  }
+  :root{
+    --colorheader: #f6f0dd;
+    --colorbtn: #f46562;
+  }
+  .cabecera{
+    text-align: center;
+    /* border: 1px red solid; */
+    padding: 10px;
+    background-color: var(--colorheader);
+  }
+
+  .cabecera figure{
+    width: 300px;
+    margin: auto;
+  }
+
+  .cabecera img{
+    width: 100%;
+    display: inline-block;
+  }
+
+  .sec-contenido{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:stretch;
+    /* border: 1px red solid;  */
+    width: 100%;
+    border-bottom: 50px var(--colorbtn) solid;
+  }
+  .art-contenido{
+    /* border: 1px red solid; */
+    width: 100%;
+    padding: 50px;
+  }
+  .titulo1{
+    color: #ccc;
+
+  }
+  .titulo2{
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  .art-text{
+    font-size: 18px;
+  }
+  .art-text2{
+    margin-top: 20px;
+    color: #ccc;;
+  }
+  .btns{
+    /* border: 1px red solid; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 20px;
+  }
+  .btn-rojo{
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 30px;
+    text-decoration: none;
+    background-color:var(--colorbtn);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .btn-blanco{
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 30px;
+    text-decoration: none;
+    border: 1px #ccc solid;
+    color: black; 
+    font-weight: bold;
+  }
+  .cont-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    background-color: #f8f8f8;
+  }
+
+  .card{
+    /* border: 1px red solid; */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .card img{
+    border-radius: 100%;
+    margin-bottom: 20px;
+  }
+
+  .card h1{
+    font-size: 25px;
+    color: var(--colorbtn);
+  }
+  .card p{
+    margin-bottom: 10px;
+    color: #bbbbbb;
+  }
+  .redes{
+    color:#494949;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .btn_cards a{
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 30px;
+    text-decoration: none;
+    background-color:var(--colorbtn);
+    color: white;
+    font-weight: bold;
+  }
+  .modal-padre{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+  .cerrar{
+    /* border: 1px red solid; */
+    max-width: 400px;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  .modal{
+    /* border: 1px red solid; */
+    max-width: 400px;
+    padding: 30px;
+    background-color: white;
+    overflow: auto;
+    height: 90vh;
+  }
+  .modal form{
+    /* border: 1px red solid; */
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+  }
+  .modal h1{
+    margin-bottom: 20px;
+  }
+  .modal p{
+    margin-bottom: 20px;
+  }
+  
+  .modal form input{
+    padding: 13px;
+    border-radius: 30px;
+    border: 0;
+    border: 1px #ccc solid;
+  }
+  .modal form textarea{
+    resize: none;
+    border-radius:20px ;
+    padding: 10px;
+    height: 100px;
+    font-family: helvetica;
+    border: 0;
+    border: 1px #ccc solid;
+  }
+  .btnmodal{
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 30px;
+    text-decoration: none;
+    background-color:var(--colorbtn);
+    color: white;
+    font-weight: bold;
+    max-width: 90px;
+    font-size: 14px;
+  }
+  .mostrar{
+    display:flex;
+  }
+
+  @media screen and (max-width: 480px) {
+    .sec-contenido{
+      flex-direction: column;
+    }
+    .cont-flex{
+      flex-direction: column;
+    }
+    .btns{
+      /* border: 1px red solid; */
+      flex-direction: column;
+      gap: 30px;
+      max-width: 190px;
+    }
+  }
